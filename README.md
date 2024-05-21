@@ -21,3 +21,17 @@ DataTable source = await ExecuteMapAsync("SELECT * FROM [имя таблицы]"
 QueryManager.ExecuteInt32(string)
 ```
 возврашает ```object``` результат (текст ячейки) первого столбца первой строки.
+
+
+## Файлы безопасности
+В папке ```/strc/security``` создан класс для быстрой перезаписи и сжатия строк данных. Класс ```Compressor``` предоставляет функции
+```csharp
+Compressor.FromBytes(string)
+Compressor.ToBytes(string)
+```
+Функции перевода данных представляют очень урезанный, но необходимый функционал, как пример попытки защиты данных для Демонстрационного экзамена
+```csharp
+string name = "OlEg"
+string compressed = await Compressor.ToBytes(name) // compressed будет выглядеть как "0JDQu9C10LrRgdC10Lk="
+```
+По такому же принципу работает функция ```FromBytes```, которая вернет из "0JDQu9C10LrRgdC10Lk=" имя указанное когда-то
