@@ -35,3 +35,8 @@ string name = "OlEg"
 string compressed = await Compressor.ToBytes(name) // compressed будет выглядеть как "0JDQu9C10LrRgdC10Lk="
 ```
 По такому же принципу работает функция ```FromBytes```, которая вернет из "0JDQu9C10LrRgdC10Lk=" имя указанное когда-то
+
+## Что такое await?
+Использование асинхронных функций и их смысл написан в моем уроке по Асинхронным Операциям
+https://github.com/AlexeyTolstopyatov/traffic-async-lesson-winforms
+В ```traffic-async-lesson-winforms``` описана одна из основ использования операторов async/await. В Дальнейшем будет продолжение уроков
